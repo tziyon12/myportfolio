@@ -52,109 +52,30 @@
 					</section>
 
 				<!-- Main -->
-					<div id="main">
-
-						<!-- One -->
-							<section id="one">
-								<div class="inner">
-									<header class="major">
-										<h2>Sed amet aliquam</h2>
-									</header>
-									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.</p>
-								</div>
-							</section>
-
-						<!-- Two -->
-							<section id="two" class="spotlights">
-								<section>
-									<a href="generic.html" class="image">
-										<img src="pic08.jpg" alt="" data-position="center center" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Orci maecenas</h3>
-											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
-										</div>
-									</div>
-								</section>
-								<section>
-									<a href="generic.html" class="image">
-										<img src="pic09.jpg" alt="" data-position="top center" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Rhoncus magna</h3>
-											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
-										</div>
-									</div>
-								</section>
-								<section>
-									<a href="generic.html" class="image">
-										<img src="pic10.jpg" alt="" data-position="25% 25%" />
-									</a>
-									<div class="content">
-										<div class="inner">
-											<header class="major">
-												<h3>Sed nunc ligula</h3>
-											</header>
-											<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</p>
-											<ul class="actions">
-												<li><a href="generic.html" class="button">Learn more</a></li>
-											</ul>
-										</div>
-									</div>
-								</section>
-							</section>
-
-						<!-- Three -->
-							<section id="three">
-								<div class="inner">
-									<header class="major">
-										<h2>Massa libero</h2>
-									</header>
-									<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button next">Get Started</a></li>
-									</ul>
-								</div>
-							</section>
-
+				<div id="main">
+				  <div class="tab">
+					  <button class="tablinks" onmouseover="openCity(event, 'London')">London</button>
+					  <button class="tablinks" onmouseover="openCity(event, 'Paris')">Paris</button>
+					  <button class="tablinks" onmouseover="openCity(event, 'Tokyo')">Tokyo</button>
 					</div>
 
-				<!-- Contact -->
-					<section id="contact">
-						<div class="">
-                            <br>
-							<section class="">
-									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
-										<h3>Email</h3>
-										<a href="mailto:tziyon_israel@outlook.com" target="_blank">tziyon_israel@outlook.com</a>
-									</div>                
-								</section>
-				
-                            <section class="split">
-								<hr>
-                                <section>
-									<div class="contact-method">
-										<span class="icon brands alt fa-linkedin-in"></span>
-										<h3>LinkedIn</h3>
-										<a href="https://www.linkedin.com/in/tziyon-israel-76b761169" target="_blank">Visit my LinkedIn profile</a>
-									</div>    
-                                </section>
-                            
-					</section>
-                        <hr>
+					<div id="London" class="tabcontent">
+					  <h3>London</h3>
+					  <p>London is the capital city of England.</p>
+					</div>
+
+					<div id="Paris" class="tabcontent">
+					  <h3>Paris</h3>
+					  <p>Paris is the capital of France.</p> 
+					</div>
+
+					<div id="Tokyo" class="tabcontent">
+					  <h3>Tokyo</h3>
+					  <p>Tokyo is the capital of Japan.</p>
+					</div>
+
+					<div class="clearfix"></div>
+
 
 				<!-- Footer -->
 					<footer id="footer">
@@ -173,6 +94,22 @@
 
 
 		<!-- Scripts -->
+			
+			<script>
+			function openCity(evt, cityName) {
+			  var i, tabcontent, tablinks;
+			  tabcontent = document.getElementsByClassName("tabcontent");
+			  for (i = 0; i < tabcontent.length; i++) {
+			    tabcontent[i].style.display = "none";
+			  }
+			  tablinks = document.getElementsByClassName("tablinks");
+			  for (i = 0; i < tablinks.length; i++) {
+			    tablinks[i].className = tablinks[i].className.replace(" active", "");
+			  }
+			  document.getElementById(cityName).style.display = "block";
+			  evt.currentTarget.className += " active";
+			}
+			</script>
 			<script src="jquery.min.js"></script>
 			<script src="jquery.scrolly.min.js"></script>
 			<script src="jquery.scrollex.min.js"></script>
