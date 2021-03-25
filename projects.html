@@ -51,59 +51,36 @@
 						</div>
 					</section>
 
-				<!-- Main -->
-				<div id="main">
-				  <div class="tab">
-					  <button class="tablinks" onmouseover="openCity(event, 'HTML5&amp;CSS3')">HTML5&amp;CSS3</button>
-					  <button class="tablinks" onmouseover="openCity(event, 'JAVASCRIPT')">JAVASCRIPT</button>
-					  <button class="tablinks" onmouseover="openCity(event, 'JQUERY')">JQUERY</button>
-					  <button class="tablinks" onmouseover="openCity(event, 'REACT')">REACT</button>
-					  <button class="tablinks" onmouseover="openCity(event, 'BOOTSTRAP')">BOOTSTRAP</button>
-					  <button class="tablinks" onmouseover="openCity(event, 'PHP')">PHP</button>
-					  <button class="tablinks" onmouseover="openCity(event, 'WORDPRESS')">WORDPRESS</button>
-					  <button class="tablinks" onmouseover="openCity(event, 'MySQL')">MySQL</button>
-					</div>
+				<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+				<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">News</button>
+				<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+				<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
 
-					<div id="HTML5&amp;CSS3" class="tabcontent">
-					  <h3>London</h3>
-					  <p>London is the capital city of England.</p>
-					</div>
+				<div id="Home" class="tabcontent">
+				  <h3>HTML5/CSS3</h3>
+				  <p>Webpage content, styling and interactions</p>
+				</div>
 
-					<div id="JAVASCRIPT" class="tabcontent">
-					  <h3>Paris</h3>
-					  <p>Paris is the capital of France.</p> 
-					</div>
+				<div id="News" class="tabcontent">
+				  <h3>JAVASCRIPT</h3>
+				  <p>Make webpages interactive.</p>
+				</div>
 
-					<div id="JQUERY" class="tabcontent">
-					  <h3>Tokyo</h3>
-					  <p>Tokyo is the capital of Japan.</p>
-					</div>
+				<div id="Contact" class="tabcontent">
+				  <h3>JQUERY</h3>
+				  <p>helps the designer to use javascript code easily for their websites.</p>
+				</div>
+
+				<div id="About" class="tabcontent">
+				  <h3>MORE</h3>
+				  <p>including wordpress, MySQL, PHP and more.</p>
+				</div>
 					
-					<div id="REACT" class="tabcontent">
-					  <h3>Tokyo</h3>
-					  <p>Tokyo is the capital of Japan.</p>
-					</div>
-					
-					<div id="BOOTSTRAP" class="tabcontent">
-					  <h3>Tokyo</h3>
-					  <p>Tokyo is the capital of Japan.</p>
-					</div>
-					
-					<div id="WORDPRESS" class="tabcontent">
-					  <h3>Tokyo</h3>
-					  <p>Tokyo is the capital of Japan.</p>
-					</div>
-					
-					<div id="MySQL" class="tabcontent">
-					  <h3>Tokyo</h3>
-					  <p>Tokyo is the capital of Japan.</p>
-					</div>
-					
-					<div class="clearfix"></div>
-					<br>
 					<ul class="actions">
 					<li><a href="skills.html" class="button next">Go to My Skills</a></li>
 					</ul>
+					<br>
+					
 				<!-- Contact -->
 					<section id="contact">
 						<div class="">
